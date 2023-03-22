@@ -1,8 +1,16 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { HiPlusCircle } from 'react-icons/hi';
-
+import { addTodo } from '../features/todo';
 const TodoInput = () => {
   const [input, setInput] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSubmit = () => {
+    if (input.trim() === '') return;
+    dispatch(addTodo(input));
+    setInput('');
+  };
 
   return (
     <div className='w-150'>
@@ -15,7 +23,7 @@ const TodoInput = () => {
           placeholder='add todo...'
           className='w-full bg-transparent text-lg border-none outline-none placeholder:text-gray-200'
         />
-        <HiPlusCircle size={30} className={`cursor-pointer text-green-500`} />
+        <HiPlusCircle onClick={handleSubmit} size={30} className={`cursor-pointer text-green-500`} />
       </div>
     </div>
   );
