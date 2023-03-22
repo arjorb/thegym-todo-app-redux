@@ -1,5 +1,9 @@
+import { useSelector } from 'react-redux';
 import { FaTrash } from 'react-icons/fa';
+
 const TodoList = () => {
+  const todos = useSelector(state => state.todo.value);
+  console.log(todos);
   return (
     <div className='flex justify-between gap-5 items-center mt-5 border-b-2 border-gray-100 pb-2 w-150'>
       <div className='flex gap-3 items-baseline'>
