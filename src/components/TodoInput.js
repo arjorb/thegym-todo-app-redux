@@ -23,7 +23,7 @@ const TodoInput = () => {
           placeholder='add todo...'
           className='w-full bg-transparent text-lg border-none outline-none placeholder:text-gray-200'
         />
-        <HiPlusCircle onClick={handleSubmit} size={30} className={`cursor-pointer text-green-500`} />
+        <HiPlusCircle onClick={handleSubmit} size={30} className={`cursor-pointer ${input.trim() === '' ? 'text-gray-300 cursor-not-allowed' : 'text-green-500'} duration-500`} />
       </div>
     </div>
   );
