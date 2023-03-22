@@ -3,6 +3,7 @@ import { HiPlusCircle } from 'react-icons/hi';
 
 const TodoInput = () => {
   const [input, setInput] = useState('');
+
   return (
     <div className='w-150'>
       <h1 className='text-6xl text-center font-bold text-gray-100'>Todos</h1>
