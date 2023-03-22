@@ -8,8 +8,8 @@ const TodoList = () => {
           Let's See what we got here
         </label>
       </div>
-      <div className='bg-red-100 p-3 rounded-full cursor-pointer'>
-        <FaTrash className='text-red-500' />
+      <div className='bg-red-50 p-3 rounded-full cursor-pointer'>
+        <FaTrash className='text-red-300' />
       </div>
     </div>
   );
