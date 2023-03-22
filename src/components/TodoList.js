@@ -14,9 +14,7 @@ const TodoList = () => {
       {todo.isEdited === false ? (
         <div className='flex gap-3 items-baseline'>
           <input type='checkbox' id='todo' onChange={() => dispatch(completedTodo(todo.id))} checked={todo.isChecked} />
-          <label htmlFor='todo' className={`text-xl text-gray-500 leading-tight ${todo.isChecked ? 'line-through' : 'no-underline'}`}>
-            {todo.title}
-          </label>
+          <label className={`text-xl text-gray-500 leading-tight ${todo.isChecked ? 'line-through' : 'no-underline'}`}>{todo.title}</label>
         </div>
       ) : (
         <div className='w-full flex items-center border border-slate-300 rounded-sm'>

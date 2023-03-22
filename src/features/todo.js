@@ -26,9 +26,7 @@ export const todoSlice = createSlice({
     },
     completedTodo: (state, action) => {
       state.value = state.value.map(prev => {
-        if (prev.id === action.payload) {
-          return { ...prev, isChecked: !prev.isChecked };
-        }
+        return prev.id === action.payload ? { ...prev, isChecked: !prev.isChecked } : prev;
       });
     },
   },
