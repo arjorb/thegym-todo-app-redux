@@ -3,7 +3,7 @@ import TodoList from './TodoList';
 
 const Todo = () => {
   return (
-    <div>
+    <div className='flex flex-col items-center mt-16'>
       <TodoInput />
       <TodoList />
     </div>
