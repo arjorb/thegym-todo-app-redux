@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { HiPlusCircle } from 'react-icons/hi';
 import { addTodo } from '../features/todo';
+
 const TodoInput = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();

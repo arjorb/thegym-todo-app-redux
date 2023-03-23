@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { removeTodo, updateTodo, completedTodo, editTodo } from '../features/todo';
+import { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { HiOutlinePencilSquare } from 'react-icons/hi2';
 import { HiPlusCircle } from 'react-icons/hi';
-import { useState } from 'react';
 
 const TodoList = () => {
   const todos = useSelector(state => state.todo.value);
