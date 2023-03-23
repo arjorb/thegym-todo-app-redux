@@ -7,7 +7,7 @@ const TodoInput = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
 
-  const handleSubmit = () => {
+  const handleClick = () => {
     if (input.trim() === '') return;
     dispatch(addTodo(input));
     setInput('');
@@ -24,7 +24,7 @@ const TodoInput = () => {
           placeholder='add todo...'
           className='w-full bg-transparent text-lg border-none outline-none placeholder:text-gray-200'
         />
-        <HiPlusCircle onClick={handleSubmit} size={30} className={`cursor-pointer ${input.trim() === '' ? 'text-gray-300' : 'text-green-500'} duration-700`} />
+        <HiPlusCircle onClick={handleClick} size={30} className={`cursor-pointer ${input.trim() === '' ? 'text-gray-300' : 'text-green-500'} duration-700`} />
       </div>
     </div>
   );
